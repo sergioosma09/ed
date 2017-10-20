@@ -1,0 +1,16 @@
+10/10/2017
+repaso de operaciones de git
+git config --global user.email sergioosma09@gmail.com
+git config --global user.name sergioosma09
+git config --global push.default simple
+
+clonado:
+git clone https://github.com/sergioosma09/ed.git
+
+nueva version:
+git add diario.txt (marca el fichero diario.txt)
+git commit -m "Resumen de la nueva version" (incluye los marcados)
+
+publicacion en remoto:
+git push 
+
