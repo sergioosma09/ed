@@ -1,5 +1,7 @@
 package org.institutoserpis.ed;
 
+import static org.junit.Assert.assertEquals;
+
 public class vector {
 
 	public static void main(String[] args) {
@@ -7,16 +9,49 @@ public class vector {
 		for (int index=0; index<5;index++)
 		System.out.printf("v{%s}=%s ", index, v[index]);
 		System.out.println();
-		int value=33;
+		int value=6;
 		int position = indexOf(v, value);
 		System.out.println("position= " + position);
+		int min= min(v);
+		System.out.println("min= " + min);
 	}
 		public static int indexOf(int[] v,int value) {
 			int index=0;
-			while(index<v.length && v[index]!=value)
+			while(index<v.length && v[index]!=value  )
 				index++;
-			if(index<v.length)
-				return index;
-			return -1;
+			return index<v.length ? index:-1;
+//			for(int index=0;index<v.length;index++)
+//				if(v[index]==value)
+//					return index;
+//			return -1;
+		}
+		static int min(int[] v) {
+//			int min=v[0];
+//			for(int index=0;index<v.length;index++)
+//				if(v[index]<min)
+//					min=v[index];
+//			return min;
+			int min=v[0];
+			for(int item:v)
+				if(item<min)
+					min=item;
+			return min;
+
+			 
+		}
+		public static int IndexOfMin(int[] v) {
+			int indexOfMin=0;
+			for(int index=1;index<v.length;index++)
+				if(v[index]<v[indexOfMin])
+					indexOfMin=index;
+			return indexOfMin;
+		}
+		public static int sum(int[] v) {
+			int suma=0;
+			//for(int index=0; index<v.length;index++)
+				//suma=suma+ v[index];
+			for(int item:v)
+				suma=suma + item;
+			return suma;
 		}
 }
