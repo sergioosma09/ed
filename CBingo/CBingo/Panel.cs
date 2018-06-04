@@ -13,7 +13,7 @@ namespace CBingo
 		private List<Button> buttons = new List<Button> ();
 		public Panel (Container parent){
 			Table table = new Table (9,10,true);
-			for (int index = 0; index < 90; index++) {
+			for (int index = 0; index < 9; index++) {
 				Button button = new Button ();
 				button.Label = (index + 1).ToString ();
 				button.Visible = true;

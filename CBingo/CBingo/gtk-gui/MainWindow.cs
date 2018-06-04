@@ -8,6 +8,10 @@ public partial class MainWindow
 	private global::Gtk.HBox hbox1;
 	
 	private global::Gtk.Button buttonAdelante;
+	
+	private global::Gtk.ScrolledWindow GtkScrolledWindow;
+	
+	private global::Gtk.TextView textview1;
 
 	protected virtual void Build ()
 	{
@@ -41,6 +45,18 @@ public partial class MainWindow
 		w2.Position = 0;
 		w2.Expand = false;
 		w2.Fill = false;
+		// Container child VBoxMain.Gtk.Box+BoxChild
+		this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
+		this.GtkScrolledWindow.Name = "GtkScrolledWindow";
+		this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
+		// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
+		this.textview1 = new global::Gtk.TextView ();
+		this.textview1.CanFocus = true;
+		this.textview1.Name = "textview1";
+		this.GtkScrolledWindow.Add (this.textview1);
+		this.VBoxMain.Add (this.GtkScrolledWindow);
+		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.VBoxMain [this.GtkScrolledWindow]));
+		w4.Position = 2;
 		this.Add (this.VBoxMain);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();

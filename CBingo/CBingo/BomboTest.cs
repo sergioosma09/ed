@@ -13,9 +13,9 @@ namespace CBingo
 			List<int> bolas = new List<int> ();
 			Bombo bombo = new Bombo ();
 
-			for(int contador=1;contador<=90;contador++){
+			for(int contador=0;contador<=9;contador++){
 				int bola = bombo.SacarBola ();
-				Assert.IsTrue (bola >= 1 && bola <= 90, "Debe estar entre 1 y 90");
+				Assert.IsTrue (bola >= 0 && bola <= 9, "Debe estar entre 0 y 9");
 				Assert.IsFalse (bolas.Contains (bola), "bola repetida: " + bola);
 				bolas.Add (bola);
 		}
@@ -23,7 +23,7 @@ namespace CBingo
 		[Test]
 		public void QuedanBolas(){
 			Bombo bombo = new Bombo ();
-			for (int contador = 1; contador <= 90; contador++) {
+			for (int contador = 0; contador <= 9; contador++) {
 				Assert.IsTrue (bombo.QuedanBolas (), "Deben quedar bolas");
 				bombo.SacarBola ();
 			}

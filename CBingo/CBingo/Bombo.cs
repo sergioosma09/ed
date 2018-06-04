@@ -7,7 +7,7 @@ namespace CBingo
 	{
 		private List<int> bolas = new List<int> ();
 		public Bombo (){
-			for (int bola = 1; bola <= 90; bola++)
+			for (int bola = 0; bola <= 9; bola++)
 				bolas.Add (bola);
 		}
 		private Random random = new Random ();
