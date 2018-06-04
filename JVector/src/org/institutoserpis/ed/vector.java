@@ -48,8 +48,6 @@ public class vector {
 		}
 		public static int sum(int[] v) {
 			int suma=0;
-			//for(int index=0; index<v.length;index++)
-				//suma=suma+ v[index];
 			for(int item:v)
 				suma=suma + item;
 			return suma;
